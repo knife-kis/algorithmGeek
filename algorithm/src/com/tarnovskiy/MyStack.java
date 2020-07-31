@@ -42,6 +42,8 @@ public class MyStack<T> {
         return list[size - 1];
     }
 
+
+
     public int size() {
         return size;
     }
