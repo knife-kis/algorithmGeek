@@ -1,6 +1,7 @@
 package com.tarnovskiy.lesson4;
 
 import java.util.Iterator;
+import java.util.ListIterator;
 
 public class MyLinkedList<T> implements Iterable<T>{
     private Node first;
@@ -10,6 +11,11 @@ public class MyLinkedList<T> implements Iterable<T>{
     @Override
     public Iterator<T> iterator() {
         return new Iter();
+    }
+
+
+    public Iterator<T> ListIterator() {
+        return new ListIter();
     }
 
     public MyLinkedList() {
@@ -48,6 +54,27 @@ public class MyLinkedList<T> implements Iterable<T>{
         @Override
         public T next() {
             current = current.next;
+            return current.value;
+        }
+    }
+    private class ListIter implements Iterator<T>{
+        Node current = new Node(null, first);
+        @Override
+        public boolean hasNext() {
+            return current.next != null;
+        }
+
+        @Override
+        public T next() {
+            current = current.next;
+            return current.value;
+        }
+        public boolean hasPrevious(){
+            return current.previous != null;
+        }
+
+        public T previous(){
+            current = current.previous;
             return current.value;
         }
     }
