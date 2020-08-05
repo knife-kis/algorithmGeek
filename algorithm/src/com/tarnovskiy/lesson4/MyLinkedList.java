@@ -42,6 +42,7 @@ public class MyLinkedList<T> implements Iterable<T>{
             this.next = next;
             this.previous = previous;
         }
+
     }
 
     private class Iter implements Iterator<T>{
