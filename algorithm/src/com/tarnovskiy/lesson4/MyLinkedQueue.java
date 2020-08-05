@@ -23,6 +23,6 @@ public class MyLinkedQueue <T> {
     public boolean isEmpty(){
         return queue.isEmpty();
     }
-    
+
 }
 

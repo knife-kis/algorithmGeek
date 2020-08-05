@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="019f4e88-b011-4cb4-a075-0909a7084e31" name="Default Changelist" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/LinkedQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/LinkedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/LinkedQueue.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,15 +25,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tarnovskiy/lesson4/MyLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+            <state relative-caret-position="385">
+              <caret line="68" column="25" lean-forward="true" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1594#1595#0" expanded="true" />
-                <element signature="e#1648#1649#0" expanded="true" />
+                <element signature="e#1381#1382#0" expanded="true" />
+                <element signature="e#1432#1433#0" expanded="true" />
+                <element signature="e#1595#1596#0" expanded="true" />
+                <element signature="e#1650#1651#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,12 +62,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tarnovskiy/lesson4/LinkedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="289">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
-                <element signature="e#149#150#0" expanded="true" />
-                <element signature="e#170#171#0" expanded="true" />
+                <element signature="e#177#178#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_alg_18072020 (1).zip/alg_18072020/src/lesson4/MyLinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="146" column="9" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="146" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -148,8 +157,8 @@
         <option value="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/Main.java" />
         <option value="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/MyLinkedStack.java" />
         <option value="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/MyOneLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/MyLinkedList.java" />
         <option value="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/LinkedQueue.java" />
+        <option value="$PROJECT_DIR$/src/com/tarnovskiy/lesson4/MyLinkedList.java" />
       </list>
     </option>
   </component>
@@ -208,7 +217,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596596465500" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596596902289" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -262,7 +271,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992908" visible="true" weight="0.2536913" />
@@ -386,11 +395,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tarnovskiy/lesson4/LinkedQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="289">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <element signature="e#149#150#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -404,13 +413,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tarnovskiy/lesson4/MyLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+        <state relative-caret-position="385">
+          <caret line="68" column="25" lean-forward="true" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1648#1649#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1650#1651#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_alg_18072020 (1).zip/alg_18072020/src/lesson4/MyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="146" column="9" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="146" selection-end-column="9" />
         </state>
       </provider>
     </entry>
