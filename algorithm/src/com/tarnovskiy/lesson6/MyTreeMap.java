@@ -11,7 +11,7 @@ public class MyTreeMap<Key extends Comparable<Key>, Value> {
         Node left;
         Node right;
         int size;
-//        int depth;
+        int depth;
 
         public Node(Key key, Value value) {
             this.key = key;
@@ -30,6 +30,17 @@ public class MyTreeMap<Key extends Comparable<Key>, Value> {
             return 0;
         }
         return node.size;
+    }
+
+    public int depth() {
+        return depth(root);
+    }
+
+    private int depth(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        return node.depth;
     }
 
     public boolean isEmpty() {
@@ -91,7 +102,9 @@ public class MyTreeMap<Key extends Comparable<Key>, Value> {
             node.right = put(node.right, key, value);
         }
         node.size = size(node.left) + size(node.right) + 1;
-//        node.depth += 1;
+
+        putDepth(node);
+
         return node;
     }
 
@@ -120,6 +133,9 @@ public class MyTreeMap<Key extends Comparable<Key>, Value> {
         }
         node.left = deleteMin(node.left);
         node.size = size(node.left) + size(node.right) + 1;
+
+        putDepth(node);
+
         return node;
     }
 
@@ -151,7 +167,48 @@ public class MyTreeMap<Key extends Comparable<Key>, Value> {
             node.left = temp.left;
         }
         node.size = size(node.left) + size(node.right) + 1;
+        putDepth(node);
         return node;
+    }
+
+    private void putDepth(Node node) {
+        if (node.left == null && node.right == null) {
+            node.depth = 0;
+        } else if (node.left != null && node.right == null) {
+            node.depth = node.left.depth + 1;
+        } else if (node.left == null) {
+            node.depth = node.right.depth + 1;
+        } else if (node.left.depth > node.right.depth) {
+            node.depth = node.left.depth + 1;
+        } else if (node.left.depth < node.right.depth) {
+            node.depth = node.right.depth + 1;
+        } else {
+            node.depth = node.left.depth + 1;
+        }
+    }
+
+    public boolean isBalanced() {
+        if (root == null || root.size == 1) {
+            return true;
+        } else {
+
+            int leftHeight;
+            int rightHeight;
+
+            if (root.left == null) {
+                leftHeight = 0;
+            } else {
+                leftHeight = root.left.depth;
+            }
+
+            if (root.right == null) {
+                rightHeight = 0;
+            } else {
+                rightHeight = root.right.depth;
+            }
+
+            return Math.abs(leftHeight - rightHeight) <= 1;
+        }
     }
 
     @Override
