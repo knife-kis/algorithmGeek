@@ -1,4 +1,4 @@
-package lesson7;
+package com.tarnovskiy.lesson7;
 
 import java.util.LinkedList;
 
