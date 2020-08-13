@@ -1,6 +1,7 @@
 package com.tarnovskiy.lesson4;
 
 import java.util.Iterator;
+import java.util.ListIterator;
 
 public class MyLinkedList<T> implements Iterable<T>{
     private Node first;
@@ -10,6 +11,11 @@ public class MyLinkedList<T> implements Iterable<T>{
     @Override
     public Iterator<T> iterator() {
         return new Iter();
+    }
+
+
+    public Iterator<T> ListIterator() {
+        return new ListIter();
     }
 
     public MyLinkedList() {
@@ -36,6 +42,7 @@ public class MyLinkedList<T> implements Iterable<T>{
             this.next = next;
             this.previous = previous;
         }
+
     }
 
     private class Iter implements Iterator<T>{
@@ -49,6 +56,88 @@ public class MyLinkedList<T> implements Iterable<T>{
         public T next() {
             current = current.next;
             return current.value;
+        }
+    }
+    private class ListIter implements Iterator<T>{
+        Node nextNode = first;
+        Node prevNode = null;
+        int index = -1;
+        boolean lastOperationIsNext;
+
+        @Override
+        public boolean hasNext() {
+            return nextNode != null;
+        }
+
+        @Override
+        public T next() {
+            T temp = (T) nextNode.value;
+            prevNode = nextNode;
+            nextNode = nextNode.next;
+            index++;
+            lastOperationIsNext = true;
+            return temp;
+        }
+
+        public boolean hasPrevious() {
+            return prevNode != null;
+        }
+
+        public T previous() {
+            T temp = (T) prevNode.value;
+            nextNode = prevNode;
+            prevNode = prevNode.previous;
+            index--;
+            lastOperationIsNext = false;
+            return temp;
+        }
+
+        public int nextIndex() {
+            return index + 1;
+        }
+
+        public int previousIndex() {
+            return index;
+        }
+
+        @Override
+        public void remove() {
+            //удалить элемент на который показывает prevNode
+            if (lastOperationIsNext) {
+                if (!hasNext()) {
+                    deleteLast();
+                    nextNode = null;
+                    prevNode = last;
+                    return;
+                }
+                nextNode.previous = prevNode.previous;
+                if (prevNode.previous != null) {
+                    prevNode.previous.next = nextNode;
+                }
+                prevNode = nextNode.previous;
+            } else {//удалить элемент на который показывает nextNode
+                if (!hasPrevious()) {
+                    deleteFirst();
+                    prevNode = null;
+                    nextNode = first;
+                    return;
+                }
+                prevNode.next = nextNode.next;
+                if (nextNode.next != null) {
+                    nextNode.next.previous = prevNode;
+                }
+                nextNode = prevNode.next;
+            }
+        }
+
+        public void set(T t) {
+            //изменить элемент на который показывает prevNode если был next()
+            //изменить элемент на который показывает nextNode если был previous()
+
+        }
+
+        public void add(T t) {
+            //вставить элемент между prevNode и nextNode
         }
     }
 
