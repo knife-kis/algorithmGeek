@@ -1,4 +1,4 @@
-package lesson7;
+package com.tarnovskiy.lesson7;
 
 import java.util.LinkedList;
 
@@ -6,7 +6,7 @@ public class BreadthFirstPath {
     private boolean[] marked;
     private int[] edgeTo;
     private int source;
-
+    private int countPath;
 
     public BreadthFirstPath(Graph g, int source) {
         this.source = source;
@@ -47,7 +47,16 @@ public class BreadthFirstPath {
         while (vertex != source) {
             stack.push(vertex);
             vertex = edgeTo[vertex];
+            setCountPath();
         }
         return stack;
+    }
+
+    public int setCountPath() {
+        return countPath++;
+    }
+
+    public int getCountPath() {
+        return countPath;
     }
 }
